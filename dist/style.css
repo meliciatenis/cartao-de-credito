@@ -1,0 +1,209 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background: #ddeefc;
+  font-family: 'Lato', sans-serif; }
+
+.contenedor {
+  width: 90%;
+  max-width: 1000px;
+  padding: 40px 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* ---------- boton desplegable ----------*/
+  /* ---------- formulario ----------*/ }
+  .contenedor .tarjeta.active {
+    transform: rotateY(360deg) !important; }
+  .contenedor .formulario-tarjeta.active {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0) !important; }
+  .contenedor .tarjeta {
+    width: 100%;
+    max-width: 550px;
+    position: relative;
+    color: #fff;
+    transition: .5s ease all;
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    cursor: pointer;
+    z-index: 2;
+    /* ---------- Tarjeta Delantera ----------*/
+    /* ---------- Tarjeta trasera ----------*/ }
+    .contenedor .tarjeta .delantera {
+      width: 100%;
+      background: url("../img/bg-tarjeta/bg-tarjeta-05.png");
+      background-size: cover; }
+      .contenedor .tarjeta .delantera .logo-marca {
+        text-align: right;
+        min-height: 50px; }
+        .contenedor .tarjeta .delantera .logo-marca img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          max-width: 80px; }
+      .contenedor .tarjeta .delantera .chip {
+        width: 100%;
+        max-width: 50px;
+        margin-bottom: 20px; }
+      .contenedor .tarjeta .delantera .grupo p {
+        margin: 0; }
+      .contenedor .tarjeta .delantera .grupo .label {
+        font-size: 16px;
+        color: #7D8994;
+        margin-bottom: 5px; }
+      .contenedor .tarjeta .delantera .grupo .numero, .contenedor .tarjeta .delantera .grupo .nombre, .contenedor .tarjeta .delantera .grupo .expiracion {
+        font-size: 22px;
+        color: #fff;
+        text-transform: uppercase; }
+      .contenedor .tarjeta .delantera .flexbox {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px; }
+    .contenedor .tarjeta .trasera {
+      width: 100%;
+      background: url("../img/bg-tarjeta/bg-tarjeta-05.png");
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      transform: rotateY(180deg);
+      backface-visibility: hidden; }
+      .contenedor .tarjeta .trasera .barra-magnetica {
+        background-color: black;
+        height: 40px;
+        width: 100%;
+        position: absolute;
+        top: 30px;
+        left: 0; }
+      .contenedor .tarjeta .trasera .datos {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between; }
+        .contenedor .tarjeta .trasera .datos p {
+          margin-bottom: 5px; }
+        .contenedor .tarjeta .trasera .datos #firma {
+          width: 70%; }
+          .contenedor .tarjeta .trasera .datos #firma .firma {
+            height: 40px;
+            background: repeating-linear-gradient(skyblue 0, skyblue 5px, orange 5px, orange 10px); }
+            .contenedor .tarjeta .trasera .datos #firma .firma p {
+              line-height: 40px;
+              font-family: 'Liu Jian Mao Cao', cursive;
+              color: #000;
+              font-size: 30px;
+              padding: 0 10px;
+              text-transform: capitalize; }
+        .contenedor .tarjeta .trasera .datos #ccv {
+          width: 20%; }
+          .contenedor .tarjeta .trasera .datos #ccv .ccv {
+            background-color: white;
+            height: 40px;
+            color: #000;
+            padding: 0 10px;
+            text-align: center; }
+        .contenedor .tarjeta .trasera .datos .trasera .leyenda {
+          font-size: 14px;
+          line-height: 24px; }
+        .contenedor .tarjeta .trasera .datos .trasera .link-banco {
+          font-size: 14px;
+          color: #fff !important;
+          text-decoration: none; }
+  .contenedor .contendor-btn .btn-abrir-formulario {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 20px;
+    background: #2364d2;
+    color: #fff;
+    position: relative;
+    top: -25px;
+    z-index: 3;
+    border-radius: 100%;
+    box-shadow: -5px 4px 8px rgba(24, 56, 182, 0.4);
+    padding: 5px;
+    transition: all .2s ease;
+    border: none;
+    cursor: pointer; }
+    .contenedor .contendor-btn .btn-abrir-formulario:hover {
+      background: #1850b1; }
+  .contenedor .contendor-btn .rotar {
+    transform: rotate(45deg) !important; }
+  .contenedor .formulario-tarjeta {
+    background-color: #fff;
+    width: 100%;
+    max-width: 700px;
+    padding: 150px 30px 30px 30px;
+    border-radius: 10px;
+    position: relative;
+    top: -150px;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path .3s ease-out; }
+    .contenedor .formulario-tarjeta label {
+      display: block;
+      color: #7d8994;
+      margin-bottom: 5px;
+      font-size: 16px; }
+    .contenedor .formulario-tarjeta input, .contenedor .formulario-tarjeta select {
+      border: 2px solid #CED6E0;
+      font-size: 18px;
+      height: 50px;
+      width: 100%;
+      padding: 5px 12px;
+      transition: .3s ease all;
+      border-radius: 5px; }
+      .contenedor .formulario-tarjeta input:hover, .contenedor .formulario-tarjeta select:hover {
+        border: 2px solid #93bfbd; }
+      .contenedor .formulario-tarjeta input:focus, .contenedor .formulario-tarjeta select:focus {
+        outline: #040404;
+        box-shadow: 1px 7px 10px -5px rgba(90, 116, 148, 0.3); }
+    .contenedor .formulario-tarjeta input {
+      margin-bottom: 20px;
+      text-transform: uppercase; }
+    .contenedor .formulario-tarjeta select {
+      -webkit-appearance: none; }
+    .contenedor .formulario-tarjeta .flexbox {
+      display: flex;
+      justify-content: space-between; }
+      .contenedor .formulario-tarjeta .flexbox .expira {
+        width: 100%; }
+      .contenedor .formulario-tarjeta .flexbox .grupo-select {
+        margin-right: 10px;
+        color: #fff;
+        width: 100%;
+        position: relative; }
+        .contenedor .formulario-tarjeta .flexbox .grupo-select i {
+          position: absolute;
+          color: #CED6E0;
+          top: 18px;
+          right: 15px;
+          transition: .3s ease all; }
+          .contenedor .formulario-tarjeta .flexbox .grupo-select i:hover {
+            color: #93bfed; }
+      .contenedor .formulario-tarjeta .flexbox .ccv {
+        min-width: 100px; }
+    .contenedor .formulario-tarjeta .btn-enviar {
+      border: none;
+      padding: 10px;
+      font-size: 22px;
+      width: 100%;
+      color: #fff;
+      background: #2364d2;
+      box-shadow: 2px 2px 10px 0px rgba(0, 85, 212, 0.4);
+      border-radius: 5px;
+      cursor: pointer; }
+      .contenedor .formulario-tarjeta .btn-enviar:hover {
+        background: #1850b1; }
+
+.tarjeta > div {
+  padding: 30px;
+  border-radius: 15px;
+  min-height: 315px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3); }
