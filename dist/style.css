@@ -101,10 +101,12 @@ body {
           width: 20%; }
           .contenedor .tarjeta .trasera .datos #ccv .ccv {
             background-color: white;
-            height: 40px;
             color: #000;
-            padding: 0 10px;
-            text-align: center; }
+            padding: 10px 10px 0px 10px;
+            text-align: center;
+            max-height: 40px;
+            height: 40px;
+            line-height: 20px; }
         .contenedor .tarjeta .trasera .datos .trasera .leyenda {
           font-size: 14px;
           line-height: 24px; }
@@ -207,3 +209,12 @@ body {
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3); }
+
+@media (max-width: 600px) {
+  .contenedor .formulario-tarjeta .flexbox {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    width: 100%; }
+    .contenedor .formulario-tarjeta .flexbox select {
+      margin-bottom: 1em; } }
