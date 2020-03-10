@@ -59,7 +59,9 @@ body {
       .contenedor .tarjeta .delantera .grupo .numero, .contenedor .tarjeta .delantera .grupo .nombre, .contenedor .tarjeta .delantera .grupo .expiracion {
         font-size: 22px;
         color: #fff;
-        text-transform: uppercase;
+        text-transform: uppercase; }
+      .contenedor .tarjeta .delantera .grupo p.nombre {
+        width: 100%;
         text-overflow: ellipsis; }
       .contenedor .tarjeta .delantera .flexbox {
         display: flex;
